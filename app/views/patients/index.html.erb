@@ -1,0 +1,18 @@
+
+
+
+ <h1>Current Patients</h1>
+<%= link_to 'Add a patient', new_patient_path %>
+<%= link_to 'Update a patient' %>
+<%= link_to 'Remove a patient' %>
+
+ <ul>
+  <% @patients.each do |patient| %>
+    <li><%= link_to patient.name, patient %></li>
+  <% end %>
+</ul>
+
+
+  
+ 
+
