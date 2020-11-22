@@ -1,1 +1,7 @@
-<h1>Patients info<h1>
+ <h1><%= @patient.name %></h1>
+<hr />
+<br />
+<%= link_to 'Appointments', patient_appointments_path(@patient) %>
+
+
+

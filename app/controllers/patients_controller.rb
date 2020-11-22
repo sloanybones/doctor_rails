@@ -5,7 +5,7 @@ class PatientsController < ApplicationController
   end
 
   def show
-    
+    @patient = Patient.find(params[:id])
    
   end
 
@@ -25,6 +25,7 @@ class PatientsController < ApplicationController
   end
 
   def destroy
+    @patient = Patient.find(params[:id])
     @patient.destroy
     redirect_to patients_path
   end

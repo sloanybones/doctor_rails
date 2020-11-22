@@ -1,0 +1,36 @@
+<h1><%= @patient.name%> Appointments</h1>
+<%= link_to 'Make an Appointment' , new_patient_appointment_path(@patient)%>
+
+
+
+
+ <h2>Preventative</h2>
+<ul>
+  <% @prevents.each do |prev| %>
+    <li>
+      <%= prev.doctor.first_name%>
+      <br />
+      <%= link_to 'Remove', patient_appointment_path(@patient, prev), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+<h2>Check ups</h2>
+<ul>
+  <% @checks.each do |check| %>
+    <li>
+      <%= check.doctor.first_name %>
+      <br />
+      <%= link_to 'Remove', patient_appointment_path(@patient, prev), method: :delete %>
+    </li>
+ <% end %>
+</ul>
+<h2>Emergencies</h2>
+<ul>
+  <% @emers.each do |emer| %>
+    <li>
+      <%= emer.doctor.first_name %>
+      <br />
+    <%= link_to 'Remove', patient_appointment_path(@patient, prev), method: :delete %>
+   </li>
+ <% end %>
+</ul>

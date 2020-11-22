@@ -26,6 +26,8 @@ class DoctorsController < ApplicationController
     redirect_to doctors_path
   end
 
+  
+
   private
     def set_doctor
       @doctor = Doctor.find(params[:id])
